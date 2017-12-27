@@ -27,7 +27,7 @@ Latest [Create React App]() featuring React v16
 
 ### - Styles
 
-Popular Ant Design framework with SASS enabled
+[Ant Design](https://github.com/ant-design/ant-design) with SASS enabled
 
 ### - Redux
 
@@ -54,38 +54,27 @@ Inside of `src/`:
 
 ```
 + components
-  + [non-capitalised]
-    - [capitalised]
-    - index.js
+  + [components]
   - index.js
 + models
   + counter
   + status
+  - index.js
 + pages
   + home
   - index.js
 + styles
-  - index.scss
+  + core
+  + theme
+  - index.js
 + utils
 ```
 
-The benefits of having `index.js` within our `components`, `pages` and `styles` folder is because later we can do this:
-
-```js
-// instead of
-import Button from "./components/button"
-import Card from "./components/card"
-import Form from "./components/form"
-...
-
-// we can do it in one line
-import { Button, Card, Form } from "./components";
-```
+Having `index.js` may seem like a lot boilerplates initially,
+but when the list of `components` or `pages` grew bigger, this structure will allows us to import the items within easier
 
 ## TO-DO:
 
-* Add CLI features
-
-like: `react-friends new my-app`
+* Add CLI features like: `react-friends new my-app`
 
 * Tests
